@@ -1,0 +1,111 @@
+USE Spojler
+GO
+
+If (object_id('dbo.TeamsTemp') is not null) DROP TABLE dbo.TeamsTemp;
+CREATE TABLE dbo.TeamsTemp(PIN varchar(12), empName varchar(60), 
+								empSurname varchar(60), birthDate varchar(20), email varchar(70), telephone varchar(40),
+								education varchar(20), languages int, salary int, position varchar(20), date_start date, date_end date);
+go
+
+BULK INSERT dbo.TeamsTemp
+    FROM 'C:\Users\waocz\OneDrive\Pulpit\Studia\Semestr 4\DW\etl\Workery.csv'
+    WITH
+    (
+    FIRSTROW = 2,
+	DATAFILETYPE = 'char',
+    FIELDTERMINATOR = ',',  --CSV field delimiter
+    ROWTERMINATOR = '\n',   --Use to shift the control to next row
+    TABLOCK
+    )
+go
+
+
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = 'Work_Exp'
+              AND object_id = OBJECT_ID('TeamsTemp'))
+BEGIN
+   ALTER TABLE TeamsTemp
+      ADD Work_Exp int
+END
+go
+
+If (object_id('expwork') is not null) Drop View expwork;
+go
+
+create view expwork
+as
+select
+ IDE = PIN,
+ work_e = DATEDIFF(year, date_start, date_end)
+from TeamsTemp
+go
+
+merge into TeamsTemp as TT
+	using expwork as ST
+		ON TT.PIN = ST.IDE
+			when matched
+				then
+					update 
+					set TT.Work_Exp = ST.work_e
+			when not matched by source
+				then
+				delete
+			;
+go
+
+
+If (object_id('polska') is not null) Drop View polska;
+go
+
+create view polska
+as
+select
+	distinct t2.H_ID as [ID_Team],
+	CASE
+		When count(t2.ID) between 1 and 3 then '1-3'
+		When count(t2.ID) between 4 and 6 then '4-6'
+		When count(t2.ID) between 7 and 9 then '7-9'
+		When count(t2.ID) between 10 and 50 then '10+'
+	end as [No_people],
+	CASE
+		When AVG(t1.languages) between 1 and 2 then '1-2'
+		When AVG(t1.languages) between 3 and 4 then '3-4'
+		When AVG(t1.languages) between 5 and 7 then '5-7'
+		When AVG(t1.languages) between 8 and 40 then '8+'
+	end as [Known_Languages],
+	SUM(Work_Exp) as [Work]
+from TeamsTemp as t1 join Travel.dbo.Personnel as t2 on t1.PIN=t2.ID
+join Travel.dbo.Hotels as t3 on t2.H_ID = t3.ID
+group by H_ID
+go
+
+IF NOT EXISTS(SELECT * FROM sys.columns WHERE Name = 'WorkForHotel'
+              AND object_id = OBJECT_ID('Teams'))
+BEGIN
+   ALTER TABLE Teams
+      ADD WorkForHotel int
+END
+go
+
+merge into Teams as TT
+	using polska as ST
+		ON TT.ID_Team = ST.ID_Team
+			when not matched
+				then
+					insert values (
+					ST.No_people,
+					ST.Known_Languages,
+					ST.Work
+					)
+			when matched
+				then
+					update
+					set TT.WorkForHotel = ST.Work,
+					TT.Known_Languages = ST.Known_Languages,
+					TT.No_people = ST.No_people
+			when not matched by source
+				then
+					delete
+				;
+					
+go
+select * from Teams
