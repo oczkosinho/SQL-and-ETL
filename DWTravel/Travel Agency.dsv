@@ -1,0 +1,265 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="544a57b9-6a3f-4b4b-98aa-8b6678a5e643" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Travel Agency</ID>
+  <Name>Travel Agency</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Travel Agency</DataSourceID>
+  <Schema>
+    <xs:schema id="Travel_x0020_Agency" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Travel_x0020_Agency" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="0762165c-6fb4-4f3b-a582-4b5dafa8d48c">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Airlines" msprop:design-time-name="bb22f9d5-3076-4087-a6fd-d6ca37f3a0fc" msprop:DbTableName="Airlines" msprop:FriendlyName="Airlines" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Airline" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="0e4ae3d8-71f7-465a-99b4-eeaadbe9e182" msprop:DbColumnName="ID_Airline" msprop:FriendlyName="ID_Airline" type="xs:int" />
+                  <xs:element name="Name" msprop:design-time-name="ed5f54c7-975e-4427-b7b9-f7870d2f90b7" msprop:DbColumnName="Name" msprop:FriendlyName="Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Date" msprop:design-time-name="a1447465-368a-4c3c-9b92-6229da549663" msprop:DbTableName="Date" msprop:FriendlyName="Date" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Date" msprop:design-time-name="f444887e-4179-46f3-82c4-a2ffd941abda" msprop:DbColumnName="ID_Date" msprop:FriendlyName="ID_Date" type="xs:int" />
+                  <xs:element name="Date" msprop:design-time-name="8d92b41d-f5a6-4d75-8f56-83d8f0a70129" msprop:DbColumnName="Date" msprop:FriendlyName="Date" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="MonthNo" msprop:design-time-name="97d44e56-35fd-490f-94ea-c07831027085" msprop:DbColumnName="MonthNo" msprop:FriendlyName="MonthNo" type="xs:int" minOccurs="0" />
+                  <xs:element name="Month" msprop:design-time-name="907b6c07-c10c-44ec-adb6-dff4caf62344" msprop:DbColumnName="Month" msprop:FriendlyName="Month" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Year" msprop:design-time-name="53afa186-5a59-4b4a-8193-36a88c2d9753" msprop:DbColumnName="Year" msprop:FriendlyName="Year" type="xs:int" minOccurs="0" />
+                  <xs:element name="Holiday" msprop:design-time-name="02512d89-9004-4fb8-9274-b9037f93a51f" msprop:DbColumnName="Holiday" msprop:FriendlyName="Holiday" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="20" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Destinations" msprop:design-time-name="86828083-0a4b-4235-b6f4-5363d7ca96cb" msprop:DbTableName="Destinations" msprop:FriendlyName="Destinations" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Destination" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="374666d5-7eb1-4f64-883e-4da4bac41dfd" msprop:DbColumnName="ID_Destination" msprop:FriendlyName="ID_Destination" type="xs:int" />
+                  <xs:element name="Country" msprop:design-time-name="ebf1c7c1-c139-4a72-be2b-f7edf1edf6bb" msprop:DbColumnName="Country" msprop:FriendlyName="Country" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="City" msprop:design-time-name="d4752251-21d6-4454-b648-6ed8dea1d8c3" msprop:DbColumnName="City" msprop:FriendlyName="City" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Hotels" msprop:design-time-name="517533a7-add4-42c7-8ac6-22557131b682" msprop:DbTableName="Hotels" msprop:FriendlyName="Hotels" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Hotel" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="ffe0f5ad-71fa-423f-8270-3c2b8fe44730" msprop:DbColumnName="ID_Hotel" msprop:FriendlyName="ID_Hotel" type="xs:int" />
+                  <xs:element name="Name" msprop:design-time-name="378a7974-ef4e-442e-bd5e-fe82e0db960e" msprop:DbColumnName="Name" msprop:FriendlyName="Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Star_Rating" msprop:design-time-name="b2f38283-3af4-442d-8ff0-73c08c5f29b9" msprop:DbColumnName="Star_Rating" msprop:FriendlyName="Star_Rating" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="5" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Is_Star_Change" msprop:design-time-name="96fb6c1b-f9ac-42bb-818b-c743654f6773" msprop:DbColumnName="Is_Star_Change" msprop:FriendlyName="Is_Star_Change" type="xs:boolean" minOccurs="0" />
+                  <xs:element name="Date_signing_contract" msprop:design-time-name="029a75a0-5f13-4f0a-9de0-4b428a973e4a" msprop:DbColumnName="Date_signing_contract" msprop:FriendlyName="Date_signing_contract" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Date_ending_contract" msprop:design-time-name="899b1dce-02af-4976-bea1-3d8a229af2b7" msprop:DbColumnName="Date_ending_contract" msprop:FriendlyName="Date_ending_contract" type="xs:dateTime" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Insurance" msprop:design-time-name="a76ad4e5-ef3e-4b78-a30c-b0a506195b7b" msprop:DbTableName="Insurance" msprop:FriendlyName="Insurance" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="Company_Name" msprop:design-time-name="cb90dd09-d5ea-448d-824c-53e8262906cf" msprop:DbColumnName="Company_Name" msprop:FriendlyName="Company_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="60" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ID_Insurance" msprop:design-time-name="cab78652-f613-43ae-8bcb-25d19bd54374" msprop:DbColumnName="ID_Insurance" msprop:FriendlyName="ID_Insurance" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Junk" msprop:design-time-name="309c83f7-888a-419a-819d-a7056068a82e" msprop:DbTableName="Junk" msprop:FriendlyName="Junk" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Junk" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="20e9f06c-a932-4fca-8542-67c433be6d87" msprop:DbColumnName="ID_Junk" msprop:FriendlyName="ID_Junk" type="xs:int" />
+                  <xs:element name="Category_Offers" msprop:design-time-name="19d202d8-ec4a-42d8-aed1-2113aecf9289" msprop:DbColumnName="Category_Offers" msprop:FriendlyName="Category_Offers" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="9" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Offers" msprop:design-time-name="1449086b-a25c-46a8-935b-ae37a3655c2b" msprop:DbTableName="Offers" msprop:FriendlyName="Offers" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Arrival_Day" msprop:design-time-name="0badc7cc-6d23-4df6-9e38-fbb247d3268b" msprop:DbColumnName="ID_Arrival_Day" msprop:FriendlyName="ID_Arrival_Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Return_Day" msprop:design-time-name="e654a82f-debb-48b4-8b76-aa4ce4f64864" msprop:DbColumnName="ID_Return_Day" msprop:FriendlyName="ID_Return_Day" type="xs:int" minOccurs="0" />
+                  <xs:element name="Offer_Price" msprop:design-time-name="b7412ce3-2bde-4188-8ec2-02da93df9fb0" msprop:DbColumnName="Offer_Price" msprop:FriendlyName="Offer_Price" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Capacity" msprop:design-time-name="f5c0be64-770d-4ded-aaa6-a8e591ea2989" msprop:DbColumnName="Capacity" msprop:FriendlyName="Capacity" type="xs:int" minOccurs="0" />
+                  <xs:element name="Price_Trips" msprop:design-time-name="1a0b107b-8c1f-435f-9454-46e8311b3c99" msprop:DbColumnName="Price_Trips" msprop:FriendlyName="Price_Trips" type="xs:decimal" minOccurs="0" />
+                  <xs:element name="Amount_Trips" msprop:design-time-name="e58c8ed6-4e8f-4c23-a7fe-5bf7eb4962f2" msprop:DbColumnName="Amount_Trips" msprop:FriendlyName="Amount_Trips" type="xs:int" minOccurs="0" />
+                  <xs:element name="Work_Experience" msprop:design-time-name="d63cc5c0-b76a-4426-920f-e42491ad2c54" msprop:DbColumnName="Work_Experience" msprop:FriendlyName="Work_Experience" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Hotel" msprop:design-time-name="8c76441a-0ede-4a02-8acf-0b620126361c" msprop:DbColumnName="ID_Hotel" msprop:FriendlyName="ID_Hotel" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Airlines" msprop:design-time-name="acfe663d-e3b3-49e6-ab4a-9d6037be4c2b" msprop:DbColumnName="ID_Airlines" msprop:FriendlyName="ID_Airlines" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Insurance" msprop:design-time-name="6a723c6d-01b7-4ba9-9917-c95f01ad2f66" msprop:DbColumnName="ID_Insurance" msprop:FriendlyName="ID_Insurance" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Destination" msprop:design-time-name="97cefac6-35bf-43b8-8fbb-ad4c5f25b033" msprop:DbColumnName="ID_Destination" msprop:FriendlyName="ID_Destination" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Team" msprop:design-time-name="99087235-8de8-4164-b39b-5e138d7acc05" msprop:DbColumnName="ID_Team" msprop:FriendlyName="ID_Team" type="xs:int" minOccurs="0" />
+                  <xs:element name="ID_Junk" msprop:design-time-name="f7fb0028-65d8-47f8-a7d3-b49ddf8a49dc" msprop:DbColumnName="ID_Junk" msprop:FriendlyName="ID_Junk" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Teams" msprop:design-time-name="c85fdd18-532b-4cca-bbb3-d5a690f8d629" msprop:DbTableName="Teams" msprop:FriendlyName="Teams" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID_Team" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="fab0e4c2-004c-4b18-80cf-2681fde2f881" msprop:DbColumnName="ID_Team" msprop:FriendlyName="ID_Team" type="xs:int" />
+                  <xs:element name="No_people" msprop:design-time-name="25b6b9af-ef07-49d2-b181-9832add79dba" msprop:DbColumnName="No_people" msprop:FriendlyName="No_people" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Known_Languages" msprop:design-time-name="41b0bfec-31b9-4477-a785-cf9f04b62d28" msprop:DbColumnName="Known_Languages" msprop:FriendlyName="Known_Languages" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Airlines" />
+          <xs:field xpath="ID_Airline" />
+        </xs:unique>
+        <xs:unique name="dbo_Date_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Date" />
+          <xs:field xpath="ID_Date" />
+        </xs:unique>
+        <xs:unique name="dbo_Destinations_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Destinations" />
+          <xs:field xpath="ID_Destination" />
+        </xs:unique>
+        <xs:unique name="dbo_Hotels_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Hotels" />
+          <xs:field xpath="ID_Hotel" />
+        </xs:unique>
+        <xs:unique name="dbo_Insurance_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Insurance" />
+          <xs:field xpath="ID_Insurance" />
+        </xs:unique>
+        <xs:unique name="dbo_Junk_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Junk" />
+          <xs:field xpath="ID_Junk" />
+        </xs:unique>
+        <xs:unique name="dbo_Teams_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_Teams" />
+          <xs:field xpath="ID_Team" />
+        </xs:unique>
+        <xs:keyref name="FK__Offers__ID_Retur__12FDD1B2" refer="dbo_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Return_Day" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Desti__16CE6296" refer="dbo_Destinations_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Destination" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Airli__14E61A24" refer="Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Airlines" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Arriv__1209AD79" refer="dbo_Date_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Arrival_Day" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Hotel__13F1F5EB" refer="dbo_Hotels_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Hotel" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Junk__18B6AB08" refer="dbo_Junk_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Junk" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Team__17C286CF" refer="dbo_Teams_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Team" />
+        </xs:keyref>
+        <xs:keyref name="FK__Offers__ID_Insur__15DA3E5D" refer="dbo_Insurance_Constraint1">
+          <xs:selector xpath=".//dbo_Offers" />
+          <xs:field xpath="ID_Insurance" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Travel_x0020_Agency xmlns="" />
+  </Schema>
+</DataSourceView>

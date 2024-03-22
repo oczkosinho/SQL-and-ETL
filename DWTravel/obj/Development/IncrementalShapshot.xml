@@ -1,0 +1,103 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>DWTravel</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>kHC3WfBZL+UAKlCds4/2lTbG45k=16.04.2020 21:47:0316.04.2020 21:47:03</TimeStamp>
+        <ID>
+          <String>Travel Agency</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>rsYFpu5kUcl0JNRb3xxHaxWnZCU=16.04.2020 21:49:5616.04.2020 21:49:55</TimeStamp>
+        <ID>
+          <String>Travel Agency</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Q+g2Uf47Ajpln6CJSOESNubPdHc=16.04.2020 21:50:5516.04.2020 21:50:14</TimeStamp>
+        <ID>
+          <String>Insurance</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>8yJXsWEjNfu5ooh27G9W7dWs+U4=16.04.2020 21:51:1416.04.2020 21:50:14</TimeStamp>
+        <ID>
+          <String>Teams</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>XHdXdMXTKpqZOrC09nxK6WQ4Ppc=16.04.2020 21:51:2716.04.2020 21:50:14</TimeStamp>
+        <ID>
+          <String>Junk</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>lVf7gKBuOBXJL7smbOFaP4LzMW4=16.04.2020 22:10:0216.04.2020 21:50:14</TimeStamp>
+        <ID>
+          <String>Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>k1MQuGIWnMOpCSuvOerVWwm4QQg=16.04.2020 21:53:0616.04.2020 21:50:14</TimeStamp>
+        <ID>
+          <String>Airlines</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>mLAW75XX/kkygN1VGLGQhr43qes=16.04.2020 21:52:5816.04.2020 21:50:14</TimeStamp>
+        <ID>
+          <String>Destinations</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>3qacYfTLBq7c0w5eTCoxgG0NqDE=16.04.2020 22:58:3616.04.2020 21:54:24</TimeStamp>
+        <ID>
+          <String>Hotels</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>de3wbHDnfCW0vjO4TWImconKwCE=17.04.2020 10:06:2116.04.2020 21:50:135i8p+0LOD4Z0nr1uLxKSGdb8qHw=16.04.2020 23:03:0116.04.2020 21:50:13</TimeStamp>
+        <ID>
+          <String>Travel Agency</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>tulM1+AYrkmHqkrJnJ8ydFDDT98=16.04.2020 21:46:3116.04.2020 21:46:31</TimeStamp>
+      <ID>
+        <String>DWTravel</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2020-04-18T10:15:41.726667Z</LastDeployed>
+</DeploymentSnapshot>
